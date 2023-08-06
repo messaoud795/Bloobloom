@@ -1,0 +1,10 @@
+.header {
+  padding: 2rem 8rem 2rem 3rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+}

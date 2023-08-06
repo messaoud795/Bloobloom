@@ -1,0 +1,11 @@
+.collection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+
+@media (max-width: 56.25em) {
+  .collection {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}

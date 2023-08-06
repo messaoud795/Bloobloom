@@ -1,0 +1,23 @@
+.Landing-page {
+  position: relative;
+}
+
+.landing-page-header {
+  display: block;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  background-color: white;
+}
+.msg {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  font-size: 2.5rem;
+}
+
+.error {
+  color: red;
+}

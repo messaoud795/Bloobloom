@@ -1,0 +1,89 @@
+.glasses-loader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25rem;
+}
+.glasses-loader .lens {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 38px;
+  border-radius: 8px;
+  margin: 4px 6px 4px 6px;
+  background-color: #92a0b0;
+  overflow: hidden;
+}
+
+.glass-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #2b3a4a;
+  z-index: 2;
+}
+
+.reflect {
+  position: absolute;
+  top: -50px;
+  left: 10px;
+  width: 10px;
+  height: 90px;
+  transform: rotate(45deg);
+  background-color: #fff;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: shine;
+  -moz-animation-name: shine;
+  -ms-animation-name: shine;
+  animation-name: shine;
+  -webkit-animation-direction: forward;
+  -moz-animation-direction: forward;
+  -ms-animation-direction: forward;
+  animation-direction: forward;
+}
+
+@-webkit-keyframes shine {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(100px, 100px);
+  }
+}
+@-moz-keyframes shine {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(100px, 100px);
+  }
+}
+@-ms-keyframes shine {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(100px, 100px);
+  }
+}
+@keyframes shine {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(100px, 100px);
+  }
+}

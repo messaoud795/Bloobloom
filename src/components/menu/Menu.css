@@ -1,0 +1,142 @@
+.menu {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+.menu:hover .menu-title {
+  text-decoration: underline;
+}
+
+.menu-items {
+  position: absolute;
+  left: -55%;
+  background-color: white;
+  display: none;
+  padding-top: 2.5rem;
+  transform: translateX(-500px);
+  animation: leftEntranceAnimation 1s ease-in-out forwards;
+}
+
+.menu-items-content {
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  height: 100vh;
+  position: relative;
+}
+
+.menu-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.menu-item {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 26rem;
+  border-bottom: 2px solid black;
+  background-color: white;
+  opacity: 1;
+}
+.menu-item:hover {
+  background-color: black;
+  color: white;
+}
+.menu-item:hover .right-arrow-icon * {
+  fill: white;
+}
+.menu-subitem {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 26rem;
+  border-bottom: 2px solid black;
+  background-color: white;
+}
+.menu-subitem:hover {
+  background-color: black;
+  color: white;
+}
+.menu-subitems {
+  position: absolute;
+  left: 26.1rem;
+  top: -3.5%;
+  display: grid;
+  display: none;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  height: 100vh;
+  background-color: white;
+  animation: leftEntranceAnimation 1s ease-in-out forwards;
+}
+
+.menu-row:hover .menu-subitems {
+  display: block;
+}
+
+@media (max-width: 31em) {
+  .menu-close {
+    display: flex;
+    align-items: center;
+    height: 4.5rem;
+    width: 5rem;
+  }
+
+  .menu-close svg {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .menu-items {
+    width: 100vw;
+    left: -3rem;
+    z-index: 30;
+    transform: translateX(-1000px);
+  }
+  .menu-item {
+    width: 100vw;
+    z-index: 20;
+  }
+  .menu-subitems {
+    z-index: 1;
+    transform: translateX(500px);
+    animation: rightEntranceAnimation 1s ease-in-out forwards;
+  }
+
+  .menu-row:hover .menu-subitems {
+    left: 0%;
+    width: 100vw;
+    z-index: 10;
+    border-top: none;
+  }
+  .menu-subitem {
+    width: 100%;
+  }
+}
+
+@keyframes leftEntranceAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightEntranceAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
